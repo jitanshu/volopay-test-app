@@ -59,6 +59,9 @@ class SearchGif extends Component {
                 })
             })
             .catch(err => {
+                this.setState({
+                    footer_loading: false
+                })
                 const msg = err && err.message ? err.message : 'Something went wrong!'
                 alert(msg)
             })
@@ -112,6 +115,10 @@ class SearchGif extends Component {
                 })
             })
             .catch(err => {
+                this.setState({
+                    footer_loading: false,
+                    search_loading: false
+                })
                 const msg = err && err.message ? err.message : 'Something went wrong!'
                 alert(msg)
             })
